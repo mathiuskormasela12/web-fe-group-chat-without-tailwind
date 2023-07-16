@@ -11,8 +11,30 @@ import { Helmet } from '../../components'
 // import hooks
 import { useChatRoom } from '../../hooks'
 
+// import config
+import Config from '../../config'
+
 export const ChatRoom: React.FC<IChatRoomProps> = () => {
   const { accessToken, handleToken, counter, handleCounter } = useChatRoom()
+
+  const data = [
+    {
+      name: 'Env',
+      value: Config.ENV
+    },
+    {
+      name: 'Version',
+      value: Config.VERSION
+    },
+    {
+      name: 'App Url',
+      value: Config.APP_URL
+    },
+    {
+      name: 'Api Url',
+      value: Config.API_URL
+    }
+  ]
 
   return (
     <Fragment>
@@ -23,6 +45,14 @@ export const ChatRoom: React.FC<IChatRoomProps> = () => {
       <br />
       <br />
       <button type="button" onClick={handleCounter}>Counter {counter}</button>
+      <p>Env</p>
+      <ol>
+        {data.map(item => (
+          <li key={item.name}>
+            {item.name} : {item.value}
+          </li>
+        ))}
+      </ol>
     </Fragment>
   )
 }
