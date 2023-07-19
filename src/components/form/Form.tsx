@@ -8,20 +8,6 @@ export const Form = styled.form`
   width: 100%;
 `
 
-export const Input = styled.input`
-  border: none;
-  outline: none;
-  background-color: ${Colors.lightOlder};
-  font-size: 1rem;
-  width: 100%;
-  padding: 1.3em 0 1.3em 1.3em;
-  border-radius: .8em;
-  
-  &::placeholder {
-    color: ${Colors.gray};
-  }
-`
-
 export const Label = styled.label`
   color: ${Colors.dark};
   font-size: 1rem;

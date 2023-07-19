@@ -41,6 +41,7 @@ export const CreateAccount: React.FC = () => {
                     id="name"
                     placeholder="Type your name here..."
                     autoComplete="off"
+                    errorMessage="Username is required"
                   />
                 </Field>
               </Control>
