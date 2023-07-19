@@ -19,10 +19,14 @@ import {
   Button,
   TextLink,
   GoogleButton,
-  Paragraph
+  Paragraph,
+  Image
 } from '../../components'
 import { useCreateAccount } from '../../hooks/create-account-hooks/useCreateAccount'
 import { Controller } from 'react-hook-form'
+
+// import assets
+import registerImg from '../../assets/images/register-img.svg'
 
 export const CreateAccount: React.FC = () => {
   const {
@@ -151,7 +155,7 @@ export const CreateAccount: React.FC = () => {
           </Col>
           <Col>
             {/* Image Here */}
-            <p>wwlw</p>
+            <Image src={registerImg} alt="Register Image" />
           </Col>
         </Row>
       </Container>
