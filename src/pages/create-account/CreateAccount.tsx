@@ -147,7 +147,7 @@ export const CreateAccount: React.FC = () => {
                 </Button>
               </Control>
               <Control>
-                <GoogleButton type="submit">
+                <GoogleButton type="button">
                   Register with Google
                 </GoogleButton>
               </Control>

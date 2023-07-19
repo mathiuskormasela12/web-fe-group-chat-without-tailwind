@@ -13,6 +13,12 @@ export const ButtonPrimary = styled.button`
   border-radius: .8rem;
   color: ${Colors.light};
   background-color: ${Colors.primary};
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `
 
 export const ButtonDanger = styled.button`

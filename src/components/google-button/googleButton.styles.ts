@@ -7,13 +7,14 @@ export const Button = styled.button`
   border: none;
   outline: none;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.12rem;
   background-color: transparent;
   padding: 1.3rem 0 1.3rem 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${Colors.darkYoung};
+  cursor: pointer;
 `
 
 export const Img = styled.img`
