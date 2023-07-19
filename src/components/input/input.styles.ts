@@ -27,4 +27,5 @@ export const Error = styled.p`
   font-size: .8rem;
   color: ${Colors.danger};
   margin-top: .8em;
+  line-height: 1.4em;
 `
