@@ -18,7 +18,8 @@ import {
   Form,
   Button,
   TextLink,
-  GoogleButton
+  GoogleButton,
+  Paragraph
 } from '../../components'
 import { useCreateAccount } from '../../hooks/create-account-hooks/useCreateAccount'
 import { Controller } from 'react-hook-form'
@@ -126,9 +127,12 @@ export const CreateAccount: React.FC = () => {
                 </Field>
               </Control>
               <Control>
-                <TextLink to="/">
-                Do you have an account already ?
-                </TextLink>
+                <Paragraph>
+                  {'Do you have an account ? '}
+                  <TextLink to={'/'}>
+                    Login here
+                  </TextLink>
+                </Paragraph>
               </Control>
               <Control>
                 <Button

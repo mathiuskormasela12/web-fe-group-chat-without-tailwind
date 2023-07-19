@@ -25,7 +25,15 @@ export const Field = styled.div`
   margin-top: .5rem;
 `
 export const TextLink = styled(Link)`
+  color: ${Colors.primary};
+  font-weight: bold;
+  font-size: .9rem;
+  text-decoration: none;
+`
+
+export const Paragraph = styled.p`
   color: ${Colors.darkYoung};
   font-size: .9rem;
   text-decoration: none;
+  line-height: 1.2em;;
 `
