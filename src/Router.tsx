@@ -4,13 +4,14 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // import all pages
-import { ChatRoom } from './pages'
+import { ChatRoom, CreateAccount } from './pages'
 
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<ChatRoom />} />
+        <Route path='/auth/create-account' element={<CreateAccount />} />
       </Routes>
     </BrowserRouter>
   )
