@@ -1,4 +1,4 @@
-// ========== Create Account
+// ========== Login
 // import all packages
 import React, { Fragment } from 'react'
 
@@ -22,54 +22,32 @@ import {
   Paragraph,
   Image
 } from '../../components'
-import { useCreateAccount } from '../../hooks/create-account-hooks/useCreateAccount'
+import { useLogin } from '../../hooks/login-hooks/useLogin'
 import { Controller } from 'react-hook-form'
 
 // import assets
 import loginRegisterImg from '../../assets/images/login-register-img.svg'
 
-export const CreateAccount: React.FC = () => {
+export const Login: React.FC = () => {
   const {
     handleSubmit,
     onSubmit,
     control,
-    isNameError,
     isEmailError,
-    isPasswordError,
-    isRepeatPassword
-  } = useCreateAccount()
+    isPasswordError
+  } = useLogin()
 
   return (
     <Fragment>
-      <Helmet title='Group Chat | Create Account' />
+      <Helmet title='Group Chat | Login' />
      <Hero>
       <Container>
         <Row>
           <Col>
             <Header>
-              <Title>Create an Account</Title>
+              <Title>Login</Title>
             </Header>
             <Form onSubmit={handleSubmit(onSubmit)}>
-              <Control>
-                <Label htmlFor="name">Your Name</Label>
-                <Field>
-                  <Controller
-                    control={control}
-                    render={({ field: { onBlur, onChange } }) => (
-                      <Input
-                        type="text"
-                        id="name"
-                        placeholder="Type your name here..."
-                        autoComplete="off"
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        errorMessage={isNameError}
-                      />
-                    )}
-                    name="name"
-                  />
-                </Field>
-              </Control>
               <Control>
                 <Label htmlFor="email">Email</Label>
                 <Field>
@@ -111,30 +89,10 @@ export const CreateAccount: React.FC = () => {
                 </Field>
               </Control>
               <Control>
-                <Label htmlFor="repeatPassword">Repeat Password</Label>
-                <Field>
-                  <Controller
-                    control={control}
-                    render={({ field: { onBlur, onChange } }) => (
-                      <Input
-                        type="password"
-                        id="repeatPassword"
-                        placeholder="Type your repeat password here..."
-                        autoComplete="off"
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        errorMessage={isRepeatPassword}
-                      />
-                    )}
-                    name="repeatPassword"
-                  />
-                </Field>
-              </Control>
-              <Control>
                 <Paragraph>
-                  {'Do you have an account ? '}
-                  <TextLink to={'/auth/login'}>
-                    Login here
+                  {"Don't you have an account ? "}
+                  <TextLink to={'/auth/create-account'}>
+                    Register here
                   </TextLink>
                 </Paragraph>
               </Control>
@@ -143,19 +101,19 @@ export const CreateAccount: React.FC = () => {
                   type="submit"
                   variant="primary"
                 >
-                  Create an Account
+                  Login
                 </Button>
               </Control>
               <Control>
                 <GoogleButton type="button">
-                  Register with Google
+                  Login with Google
                 </GoogleButton>
               </Control>
             </Form>
           </Col>
           <Col>
             {/* Image Here */}
-            <Image src={loginRegisterImg} alt="Register Image" />
+            <Image src={loginRegisterImg} alt="Login Image" />
           </Col>
         </Row>
       </Container>
