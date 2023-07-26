@@ -15,5 +15,6 @@ rules: {
   "import/no-absolute-path": "off",
   "@typescript-eslint/no-non-null-assertion": "off",
   "@typescript-eslint/triple-slash-reference": "off",
-  "@typescript-eslint/no-empty-interface": "off"
+  "@typescript-eslint/no-empty-interface": "off",
+  "@typescript-eslint/no-misused-promises": "off"
 }
